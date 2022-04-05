@@ -6,25 +6,25 @@ template<typename T, int size>
 class TStack {
  private:
      T arr[100];
-     int t;
+     int top;
  public:
-     TStack() : t(-1) {}
+     TStack() : top(-1) {}
      bool isEmpty() const {
-         return t == -1;
+         return top == -1;
      }
      bool isFull() const {
-         return t == size - 1;
+         return top == size - 1;
      }
      T get() {
-         return arr[t];
+         return arr[top];
      }
      void pop() {
-         if (t >= 0)
-             t--;
+         if (top >= 0)
+             top--;
      }
      void push(T value) {
-         if (t < size - 1)
-             arr[++] = value;
+         if (top < size - 1)
+             arr[++top] = value;
      }
 };
 #endif  // INCLUDE_TSTACK_H_
