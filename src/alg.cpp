@@ -1,19 +1,17 @@
-// Copyright 2021 NNTU-CS
-#include <string>
 #include <map>
 #include "tstack.h"
 
-int priority(char zn) {
-    if (zn == '(') {
+int priority(char ch) {
+    if (ch == '(') {
         return 0;
     }
-    if (zn == ')') {
+    if (ch == ')') {
         return 1;
     }
-    if (zn == '+' || zn == '-') {
+    if (ch == '+' || ch == '-') {
         return 2;
     }
-    if (zn == '*' || zn == '/') {
+    if (ch == '*' || ch == '/') {
         return 3;
     }
     return -1;
@@ -28,7 +26,6 @@ bool isDigit(std::string pref) {
 }
 
 std::string infx2pstfx(std::string inf) {
-  // добавьте код
   return std::string("");
     TStack <char, 100> stack1;
     std::string post;
@@ -67,8 +64,6 @@ std::string infx2pstfx(std::string inf) {
   return post;
 }
 
-int eval(std::string pref) {
-  // добавьте код
 int eval(std::string post) {
     TStack <int, 100> stack2;
     std::string temp;
