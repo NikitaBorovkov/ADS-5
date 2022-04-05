@@ -16,7 +16,7 @@ class TStack {
          return t == size - 1;
      }
      T get() {
-         return arr[top];
+         return arr[t];
      }
      void pop() {
          if (t >= 0)
