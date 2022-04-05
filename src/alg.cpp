@@ -3,8 +3,6 @@
 #include <map>
 #include "tstack.h"
 
-using namespace std;
-
 int prior(char zn) {
     if (zn == '(') {
         return 0;
@@ -20,7 +18,7 @@ int prior(char zn) {
     }
     return -1;
 }
-bool isDigit(string pref) {
+bool isDigit(std::string pref) {
     for (size_t i = 0; i < pref.size(); ++i) {
         if (pref[i] < '0' || pref[i] > '9') {
             return false;
@@ -29,9 +27,9 @@ bool isDigit(string pref) {
     return true;
 }
 
-string infx2pstfx(string inf) {
+std::string infx2pstfx(std::string inf) {
     TStack <char, 100> stack1;
-    string post;
+    std::string post;
     for (size_t i = 0; i < inf.size(); ++i) {
         int pr = prior(inf[i]);
         if (pr == -1) {
@@ -67,9 +65,9 @@ string infx2pstfx(string inf) {
   return post;
 }
 
-int eval(string post) {
+int eval(std::string post) {
     TStack <int, 100> stack2;
-    string temp;
+    std::string temp;
     int op1 = 0, op2 = 0;
     size_t start = 0, end = 0;
     for (size_t i = 0; i < post.size(); ++i) {
