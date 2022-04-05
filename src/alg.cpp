@@ -26,6 +26,7 @@ bool isDigit(std::string pref) {
 }
 
 std::string infx2pstfx(std::string inf) {
+  // добавьте код
   return std::string("");
     TStack <char, 100> stack1;
     std::string post;
@@ -64,6 +65,8 @@ std::string infx2pstfx(std::string inf) {
   return post;
 }
 
+int eval(std::string pref) {
+  // добавьте код
 int eval(std::string post) {
     TStack <int, 100> stack2;
     std::string temp;
